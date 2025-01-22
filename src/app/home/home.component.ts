@@ -1,4 +1,6 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
+
+declare var AOS: any;
 
 @Component({
   selector: 'app-home',
@@ -7,7 +9,15 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent   {
+export class HomeComponent implements OnInit   {
+
+
+  ngOnInit(): void {
+      AOS.init({
+        duration: 1200,
+        once: true
+        });
+  }
 
   @ViewChild('mobileMenu') mobileMenu!: ElementRef;
 
@@ -27,5 +37,4 @@ export class HomeComponent   {
       this.mobileMenu.nativeElement.classList.add('hidden');
     }
   }
-
 }
