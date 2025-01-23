@@ -37,4 +37,5 @@ export class HomeComponent implements OnInit   {
       this.mobileMenu.nativeElement.classList.add('hidden');
     }
   }
+
 }
