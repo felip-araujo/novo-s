@@ -5,68 +5,49 @@
       <h2 class="text-4xl font-semibold tracking-tight text-center lg:text-left sm:text-5xl">Fale comigo</h2>
       <p class="mt-4 text-lg text-center lg:text-left text-gray-300">Entre em contato comigo diretamente por e-mail, telefone ou preencha o formulário para entrar em contato</p>
       <div class="mt-8 space-y-4">
-        <p class="text-center lg:text-left"><strong>Email:</strong> <a href="mailto:contact@example.com" class="text-indigo-400 hover:text-indigo-300"> felipedgart&#64;gmail.com</a></p>
-        <p class="text-center lg:text-left"><strong>Telefone:</strong> <a href="tel:+1234567890" class="text-indigo-400 hover:text-indigo-300"> 92 984520381</a></p>
+        <p class="text-center lg:text-left"><strong>Email:</strong> <a href="mailto:felipedgart@gmail.com" class="text-indigo-400 hover:text-indigo-300">felipedgart&#64;gmail.com</a></p>
+        <p class="text-center lg:text-left"><strong>Telefone:</strong> <a href="tel:+5592984520381" class="text-indigo-400 hover:text-indigo-300">92 98452-0381</a></p>
       </div>
     </div>
 
-    <!-- Right Column: Contact Form -->
+    <!-- Right Column: Simplified Contact Form -->
     <form [formGroup]="contatoForm" (ngSubmit)="onSubmit()" class="mx-auto w-full max-w-xl">
-      <div class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+      <div class="grid grid-cols-1 gap-y-6">
+        <!-- Nome -->
         <div>
-          <label for="first-name" class="block text-sm font-semibold text-gray-200">Nome</label>
+          <label for="nome" class="block text-sm font-semibold text-gray-200">Nome</label>
           <div class="mt-2.5">
-            <input type="text" id="first-name" formControlName="firstName" autocomplete="given-name" class="block w-full rounded-md bg-gray-800 px-3.5 py-2 text-base text-gray-300 placeholder-gray-500 focus:outline-indigo-400">
-            <div *ngIf="contatoForm.get('firstName')?.invalid && contatoForm.get('firstName')?.touched" class="text-red-500 text-sm">
+            <input type="text" id="nome" formControlName="nome" autocomplete="name" placeholder="Seu nome" class="block w-full rounded-md bg-gray-800 px-3.5 py-2 text-base text-gray-300 placeholder-gray-500 focus:outline-indigo-400">
+            <div *ngIf="contatoForm.get('nome')?.invalid && contatoForm.get('nome')?.touched" class="text-red-500 text-sm">
               Nome é obrigatório.
             </div>
           </div>
         </div>
+
+        <!-- Email -->
         <div>
-          <label for="last-name" class="block text-sm font-semibold text-gray-200">Sobre nome</label>
-          <div class="mt-2.5">
-            <input type="text" id="last-name" formControlName="lastName" autocomplete="family-name" class="block w-full rounded-md bg-gray-800 px-3.5 py-2 text-base text-gray-300 placeholder-gray-500 focus:outline-indigo-400">
-          </div>
-        </div>
-        <div class="sm:col-span-2">
           <label for="email" class="block text-sm font-semibold text-gray-200">Email</label>
           <div class="mt-2.5">
-            <input type="email" id="email" formControlName="email" autocomplete="email" class="block w-full rounded-md bg-gray-800 px-3.5 py-2 text-base text-gray-300 placeholder-gray-500 focus:outline-indigo-400" placeholder="seuemail@mail.com">
+            <input type="email" id="email" formControlName="email" autocomplete="email" placeholder="seuemail@mail.com" class="block w-full rounded-md bg-gray-800 px-3.5 py-2 text-base text-gray-300 placeholder-gray-500 focus:outline-indigo-400">
             <div *ngIf="contatoForm.get('email')?.invalid && contatoForm.get('email')?.touched" class="text-red-500 text-sm">
               Email inválido.
             </div>
           </div>
         </div>
-        <div class="sm:col-span-2">
-          <label for="phone-number" class="block text-sm font-semibold text-gray-200">Telefone</label>
+
+        <!-- Telefone -->
+        <div>
+          <label for="telefone" class="block text-sm font-semibold text-gray-200">Telefone</label>
           <div class="mt-2.5">
-            <div class="flex rounded-md bg-gray-800">
-              <select id="country" formControlName="country" autocomplete="country" aria-label="Country" class="block w-20 rounded-l-md bg-gray-800 px-3 py-2 text-base text-gray-300 focus:outline-indigo-400">
-                <option>BR</option>
-                <option>US</option>
-                <option>CA</option>
-                <option>EU</option>
-              </select>
-              <input type="text" id="phone-number" formControlName="phoneNumber" class="block w-full rounded-r-md bg-gray-800 px-3 py-2 text-base text-gray-300 placeholder-gray-500 focus:outline-indigo-400" placeholder="(00) 00000-0000">
+            <input type="text" id="telefone" formControlName="telefone" autocomplete="tel" placeholder="(00) 00000-0000" class="block w-full rounded-md bg-gray-800 px-3.5 py-2 text-base text-gray-300 placeholder-gray-500 focus:outline-indigo-400">
+            <div *ngIf="contatoForm.get('telefone')?.invalid && contatoForm.get('telefone')?.touched" class="text-red-500 text-sm">
+              Telefone é obrigatório.
             </div>
           </div>
-        </div>
-        <div class="sm:col-span-2">
-          <label for="message" class="block text-sm font-semibold text-gray-200">Mensagem</label>
-          <div class="mt-2.5">
-            <textarea id="message" formControlName="message" rows="4" class="block w-full rounded-md bg-gray-800 px-3.5 py-2 text-base text-gray-300 placeholder-gray-500 focus:outline-indigo-400"></textarea>
-            <div *ngIf="contatoForm.get('message')?.invalid && contatoForm.get('message')?.touched" class="text-red-500 text-sm">
-              Mensagem é obrigatória.
-            </div>
-          </div>
-        </div>
-        <div class="flex gap-x-4 sm:col-span-2">
-          <label class="inline-flex items-center text-sm text-gray-200">
-            <input type="checkbox" formControlName="agree" class="form-checkbox text-indigo-600">
-            <span class="ml-2">Eu concordo com os termos e condições</span>
-          </label>
         </div>
       </div>
+
+      <!-- Botão de envio -->
       <div class="mt-10">
         <button type="submit" [disabled]="contatoForm.invalid" class="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus:outline-indigo-400">
           Enviar
@@ -75,5 +56,3 @@
     </form>
   </div>
 </div>
-
-

@@ -6,6 +6,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { SobreMimComponent } from './sobre-mim/sobre-mim.component';
+import { CommonModule } from '@angular/common';
+import { ContatoComponent } from "./contato/contato.component";
 
 @NgModule({
   declarations: [
@@ -17,8 +19,10 @@ import { SobreMimComponent } from './sobre-mim/sobre-mim.component';
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AppRoutingModule
-  ],
+    AppRoutingModule,
+    CommonModule,
+    ContatoComponent
+],
   providers: [],
   bootstrap: [AppComponent]
 })
