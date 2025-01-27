@@ -15,6 +15,8 @@ import { CommonModule } from '@angular/common';
 })
 export class ContatoComponent implements OnInit {
   contatoForm!: FormGroup;
+  successMessage: string | null = null;
+  errorMessage: string | null = null;
 
   constructor(private fb: FormBuilder, private http: HttpClient) { }
 
@@ -23,6 +25,7 @@ export class ContatoComponent implements OnInit {
       nome: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
       telefone: ['', [Validators.required]],
+      message: [''],
     });
   }
 
@@ -30,12 +33,16 @@ export class ContatoComponent implements OnInit {
     if (this.contatoForm.valid) {
       const formData = this.contatoForm.value;
       this.sendFormData(formData).subscribe(response => {
-        console.log('Form data sent successfully', response);
+        this.successMessage = 'Recebemos sua mensagem!';
+        this.errorMessage = null
       }, error => {
-        console.error('Error sending form data', error);
+        this.errorMessage =  'Erro ao enviar formulário, por favor tente novamente.'
+        this.successMessage = null
       });
     } else {
       console.log('Form is invalid');
+      this,this.errorMessage = 'Formulario Inválido.'
+      this.successMessage = null
     }
   }
 
