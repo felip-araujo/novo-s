@@ -174,7 +174,7 @@
   <div id="projetos" class="bg-dark-20 py-24 sm:py-32">
     <div class=" mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8" data-aos="fade-up" data-aos-duration="1500">
       <h2 class="text-center text-base/7 font-semibold text-white text-indigo-600">Projetos</h2>
-      <p class=" mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-white sm:text-5xl">Idéias que Inspiram e Conectam</p>
+      <p class=" mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-white sm:text-5xl" >Idéias que Inspiram e Conectam</p>
       <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
 
         <div class="relative lg:row-span-2">
@@ -204,7 +204,7 @@
 Desenvolvi um plugin para personalização de adesivos SVG, permitindo customização no site, gestão completa (CRUD) e envio de e-mails automáticos.</p>
             </div>
             <div class="flex flex-1 items-center [container-type:inline-size] max-lg:py-6 lg:pb-2">
-              <img class="" src="assets/images/plugin-person.jpg" alt="">
+              <a href="../pl-project/"><img class="" src="assets/images/plugin-person.jpg" alt=""></a>
             </div>
           </div>
           <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-t-[2rem]"></div>
@@ -237,9 +237,15 @@ Desenvolvi um plugin para personalização de adesivos SVG, permitindo customiza
           </div>
           <div class="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 lg:rounded-l-[2rem]"></div>
         </div>
+
       </div>
     </div>
   </div>
+
+
+  <app-pl-project></app-pl-project>
+
+
   <div id="sobre" class="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
     <div class="absolute inset-0 -z-10 overflow-hidden" >
       <svg class="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]" aria-hidden="true">
@@ -287,7 +293,9 @@ Desenvolvi um plugin para personalização de adesivos SVG, permitindo customiza
     </div>
   </div>
 
+
 <app-contato>
+
 
   <script>
     document.getElementById('loadMore').addEventListener('click', function() {

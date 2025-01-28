@@ -8,12 +8,15 @@ import { HomeComponent } from './home/home.component';
 import { SobreMimComponent } from './sobre-mim/sobre-mim.component';
 import { CommonModule } from '@angular/common';
 import { ContatoComponent } from "./contato/contato.component";
+import { PlProjectComponent } from './pl-project/pl-project.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SobreMimComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -21,7 +24,8 @@ import { ContatoComponent } from "./contato/contato.component";
     HttpClientModule,
     AppRoutingModule,
     CommonModule,
-    ContatoComponent
+    ContatoComponent,
+    PlProjectComponent
 ],
   providers: [],
   bootstrap: [AppComponent]
