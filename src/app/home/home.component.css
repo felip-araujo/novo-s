@@ -1,3 +1,11 @@
+
+@media (max-width: 768px) {
+  #fotosobre {
+    width: 110%;
+  }
+
+}
+
 @keyframes moveBackground {
   0% {
     transform: translateX(-20px) translateY(-10px) rotate(30deg);
