@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 import { ContatoComponent } from "./contato/contato.component";
 import { PlProjectComponent } from './pl-project/pl-project.component';
 import { DpoComponent } from './dpo/dpo.component';
+import { WhatsappBComponent } from './whatsapp-b/whatsapp-b.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { DpoComponent } from './dpo/dpo.component';
     HomeComponent,
     SobreMimComponent,
     DpoComponent,
+    WhatsappBComponent,
 
   ],
   imports: [

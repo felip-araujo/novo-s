@@ -5,6 +5,7 @@ import { ContatoComponent } from './contato/contato.component';
 import { SobreMimComponent } from './sobre-mim/sobre-mim.component';
 import { PlProjectComponent } from './pl-project/pl-project.component';
 import { DpoComponent } from './dpo/dpo.component';
+import { WhatsappBComponent } from './whatsapp-b/whatsapp-b.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'sobre-mim', component: SobreMimComponent} ,
   { path: 'pl-project', component: PlProjectComponent},
   { path: 'dpo', component: DpoComponent},
+  { path: 'whatsapp', component: WhatsappBComponent}
   ];
 
 @NgModule({
