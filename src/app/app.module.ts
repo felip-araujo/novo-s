@@ -9,6 +9,7 @@ import { SobreMimComponent } from './sobre-mim/sobre-mim.component';
 import { CommonModule } from '@angular/common';
 import { ContatoComponent } from "./contato/contato.component";
 import { PlProjectComponent } from './pl-project/pl-project.component';
+import { DpoComponent } from './dpo/dpo.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { PlProjectComponent } from './pl-project/pl-project.component';
     AppComponent,
     HomeComponent,
     SobreMimComponent,
+    DpoComponent,
 
   ],
   imports: [
