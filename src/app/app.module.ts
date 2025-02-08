@@ -11,6 +11,9 @@ import { ContatoComponent } from "./contato/contato.component";
 import { PlProjectComponent } from './pl-project/pl-project.component';
 import { DpoComponent } from './dpo/dpo.component';
 import { WhatsappBComponent } from './whatsapp-b/whatsapp-b.component';
+import { IsmaComponent } from './isma/isma.component';
+import { ImperioComponent } from './imperio/imperio.component';
+import { IdpbComponent } from './idpb/idpb.component';
 
 
 @NgModule({
@@ -20,6 +23,9 @@ import { WhatsappBComponent } from './whatsapp-b/whatsapp-b.component';
     SobreMimComponent,
     DpoComponent,
     WhatsappBComponent,
+    IsmaComponent,
+    ImperioComponent,
+    IdpbComponent,
 
   ],
   imports: [
